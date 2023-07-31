@@ -98,7 +98,7 @@ body{
 }
 
 .ico3{
-    width: 90px;
+    width: 80px;
     padding-right: 10px;
     height: auto;
     display: flex;
@@ -140,11 +140,11 @@ body{
 }
 
 .hobbies2{
-    padding: 0;
     grid-area: hobbies2;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-self: center;
     align-self: center;
 }
 
@@ -200,18 +200,18 @@ a{
         height: 1280px;
         display: grid;
         margin: 0 auto;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: 0.5fr 1fr 3fr 0.5fr 3fr 0.5fr 3fr 0.5fr 3fr;
         grid-template-areas:
-        "nombre nombre nombre" 
-        "foto ubicacion ubicacion"
-        "foto descripcion descripcion"
-        "contacto1 descripcion descripcion"
-        "contacto2 educacion educacion"
-        "hobbies1 educacion educacion"
-        "hobbies2 experiencia experiencia"
-        "habilidades1 logo logo"
-        "habilidades2 logo logo";
+        "nombre nombre" 
+        "foto ubicacion"
+        "foto descripcion"
+        "contacto1 descripcion"
+        "contacto2 educacion"
+        "hobbies1 educacion"
+        "hobbies2 experiencia"
+        "habilidades1 logo"
+        "habilidades2 logo";
         gap: 1%;
     }
 
@@ -249,12 +249,17 @@ a{
     .contacto2{
         grid-area: contacto2;
         align-self: center;
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: flex-start;
+        align-self: center;
+        justify-content: center;
+        justify-self: center;
     }
     
     .ico{
-        width: 70px;
+        width: 60px;
         height: auto;
         display: flex;
     }
@@ -309,12 +314,12 @@ a{
     }
     
     .hobbies2{
-        padding: 0;
         grid-area: hobbies2;
-        display: flex;
-        flex-wrap:wrap;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         align-self: center;
+        justify-self: center;
     }
     
     .nombre{
@@ -350,4 +355,4 @@ a{
     a{
         text-decoration: none;
     }
-}
+} 
